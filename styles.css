@@ -1,25 +1,37 @@
-@media (max-width: 600px) {
+@media (max-width: 992px) {
     .box2 img {
         max-width: 120px;
     }
 }
 
-*{
+@media (max-width: 768px) {
+    .box2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .box2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     background-image: url(img/475311670_1170311428000096_322863480285564860_n.jpg);
     background-size: cover;
     color: #333;
     background-repeat: no-repeat;
     height: auto;
-
+    overflow-x: hidden; 
 }
 
-body::before{
+body::before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,7 +42,7 @@ body::before{
     z-index: -1;
 }
 
-.Haso{
+.Haso {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,27 +55,24 @@ body::before{
     color: #000;
     text-align: center;
     margin: 20px;
-    gap: 20px
+    gap: 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     color: #000;
-
 }
 
 .box2 img {
-    width: 200px;       
-    height: 250px;       
-    margin: 10px;       
+    width: 200px;
+    height: 250px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .box2 {
-    display: grid;   
+    display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -71,7 +80,8 @@ h1{
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    height: 200vh;
+    padding: 20px; 
+    
 }
 
 h5 {
@@ -90,7 +100,7 @@ h5 {
     transition: transform 0.3s ease;
 }
 
-footer img{
+footer img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -103,12 +113,12 @@ footer img:hover {
     transition: transform 0.3s ease;
 }
 
-ul{
+ul {
     text-align: left;
     color: #ffae00;
 }
 
-audio{
+audio {
     padding-top: 25px;
 }
 
@@ -118,9 +128,7 @@ audio{
     margin-top: 10px;
 }
 
-.aud1{
-    display: flex;
-    position: absolute;
-    padding-top: 100px;
-    margin-left: 30px;
+.aud1 {
+    margin: 20px auto;
+    display: block;
 }
